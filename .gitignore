@@ -1,0 +1,48 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+ENV/
+
+# Байт-код Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Результаты тестов и отчёты Allure
+allure-results/
+allure-report/
+*.xml
+*.html
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Конфигурация (если есть локальные файлы)
+config/local_settings.py
+.env
+.env.local
+
+# Скриншоты (если генерируете)
+screenshots/
+*.png
+*.jpg
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
