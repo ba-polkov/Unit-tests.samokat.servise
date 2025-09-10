@@ -11,7 +11,7 @@ class TestOrderPageOrder:
     def test_e2e_order_success(self, driver, button, test_data):
         order_page = OrderPage(driver)
         order_page.scroll_to_element(button)
-        order_page.wait_visability_of_elements(button)
+        order_page.wait_visibility_of_element(button)
         order_page.click_on_element(button)
         order_page.data_entry_first_form(test_data)
         order_page.data_entry_second_form(test_data)

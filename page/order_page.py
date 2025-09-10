@@ -10,8 +10,8 @@ class OrderPage(BasePage):
         self.click_on_element(OrderPageLocators.select_item_in_metro)
     
     @allure.step ('Ввод даты в поле ввода')
-    def send_keys_date_by_keyboard_input(self):
-        self.send_keys_to_input(OrderPageLocators.input_date).send_keys(TestData.test_data_user_1[5])
+    def send_keys_date_by_keyboard_input(self, test_data):
+        self.send_keys_to_input(OrderPageLocators.input_date).send_keys(test_data)
     
     @allure.step ('Клик по выбранной дате в выпадающем окне Календарь поля даты начала аренды')
     def click_date_on_calendar(self):
@@ -23,7 +23,7 @@ class OrderPage(BasePage):
     
     @allure.step ('Заполнение первой формы и нажатие кнопки Далее')
     def data_entry_first_form(self,test_data):
-        self.wait_visability_of_elements(OrderPageLocators.input_name)
+        self.wait_visibility_of_element(OrderPageLocators.input_name)
         self.click_on_element(OrderPageLocators.input_name)
         self.send_keys_to_input(OrderPageLocators.input_name, test_data[0])
         self.click_on_element(OrderPageLocators.input_last_name)
@@ -39,7 +39,7 @@ class OrderPage(BasePage):
     
     @allure.step ('Заполнение второй формы и окно подтвержднения')
     def data_entry_second_form(self, test_data):
-        self.wait_visability_of_elements(OrderPageLocators.input_date)
+        self.wait_visibility_of_element(OrderPageLocators.input_date)
         self.click_on_element(OrderPageLocators.input_date)
         self.send_keys_to_input(OrderPageLocators.input_date, test_data[5])
         self.click_on_element(OrderPageLocators.check_box_grey_collor_scooter)
@@ -48,5 +48,5 @@ class OrderPage(BasePage):
         self.click_on_element(OrderPageLocators.input_comment)
         self.send_keys_to_input(OrderPageLocators.input_comment, test_data[6])
         self.click_on_element(OrderPageLocators.button_make_order)
-        self.wait_visability_of_elements(OrderPageLocators.button_yes_confirm_order)
+        self.wait_visibility_of_element(OrderPageLocators.button_yes_confirm_order)
         self.click_on_element(OrderPageLocators.button_yes_confirm_order)

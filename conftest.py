@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from config import BASE_URL
+from urls import BASE_URL
 
 @pytest.fixture (scope = 'function')
 def driver():

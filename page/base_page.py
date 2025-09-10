@@ -14,7 +14,7 @@ class BasePage:
         self.driver.execute_script('arguments[0].scrollIntoView()', element)
         
     @allure.step ('Ожидание прогрузки элемента')
-    def wait_visability_of_elements (self, locator):
+    def wait_visibility_of_element (self, locator):
         return WebDriverWait(self.driver, 6).until(expected_conditions.visibility_of_element_located(locator))
     
     @allure.step ('Клик по элементу')
